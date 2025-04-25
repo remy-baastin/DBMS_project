@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student - College AMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container form-page-container">
+        <div class="form-page-wrapper">
+            <div class="form-page-header">
+                <h1>Add New Student</h1>
+                <p class="subtitle">Enter the student details below</p>
+                
+                <div class="user-info">
+                    <p id="current-user">Current User's Login: remy-baastin</p>
+                </div>
+            </div>
+            
+            <form id="addStudentForm" class="add-form">
+                <div class="form-group">
+                    <label for="studentName">Enter Name</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studentId">Enter Student ID</label>
+                    <input type="text" id="studentId" name="studentId" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assignedClass">Enter Assigned Class</label>
+                    <select id="assignedClass" name="assignedClass" required>
+                        <option value="">-- Select a class --</option>
+                        <!-- Classes will be loaded dynamically -->
+                    </select>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">Add Student</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary">Cancel</button>
+                </div>
+                
+                <div id="formMessage" class="form-message"></div>
+            </form>
+            
+            <div class="back-to-dashboard">
+                <a href="dashboard.html">&larr; Back to dashboard</a>
+            </div>
+            
+            <div class="footer-info">
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/department/add-student.js"></script>
+</body>
+</html>

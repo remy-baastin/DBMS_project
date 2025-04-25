@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance - College AMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container student-dashboard-container">
+        <div class="student-dashboard-wrapper">
+            <div class="student-dashboard-header">
+                <h1>Student Attendance</h1>
+                <h2 id="student-name">Loading student information...</h2>
+                
+                <div class="user-info">
+                    <p id="current-user">Current User's Login: remy-baastin</p>
+                </div>
+            </div>
+            
+            <div class="attendance-summary-card">
+                <div class="attendance-card-header">
+                    <h3>Your Attendance Summary</h3>
+                </div>
+                
+                <div class="attendance-percentage">
+                    <div id="percentageCircle" class="percentage-circle">
+                        <div class="circle-inner">
+                            <span id="attendanceValue">--</span><span>%</span>
+                        </div>
+                    </div>
+                    <div class="percentage-label">Overall Attendance</div>
+                </div>
+                
+                <div id="attendance-details" class="attendance-details">
+                    <div class="attendance-stat">
+                        <div class="stat-label">Classes Attended</div>
+                        <div id="classesAttended" class="stat-value">--</div>
+                    </div>
+                    <div class="attendance-stat">
+                        <div class="stat-label">Total Classes</div>
+                        <div id="totalClasses" class="stat-value">--</div>
+                    </div>
+                    <div class="attendance-stat">
+                        <div class="stat-label">Last Absence</div>
+                        <div id="lastAbsence" class="stat-value">--</div>
+                    </div>
+                </div>
+                
+                <div id="attendanceMessage" class="attendance-message">
+                    Loading your attendance data...
+                </div>
+            </div>
+            
+            <div class="monthly-attendance" id="monthlyAttendance">
+                <h3>Monthly Attendance</h3>
+                <div class="loading-message">Loading monthly data...</div>
+            </div>
+            
+            <div class="attendance-history" id="attendanceHistory">
+                <h3>Recent Attendance Records</h3>
+                <div class="loading-message">Loading attendance history...</div>
+            </div>
+            
+            <div class="dashboard-footer">
+                <button id="signOutBtn" class="btn-signout">Sign Out</button>
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/student/dashboard.js"></script>
+</body>
+</html>

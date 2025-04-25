@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Attendance Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form-wrapper">
+            <div class="header">
+                <h1>College Attendance Management System</h1>
+                <p class="subtitle">Please select your role to continue</p>
+            </div>
+            
+            <div class="role-selection">
+                <a href="department-login.html" class="role-btn department-btn">
+                    <div class="role-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                        </svg>
+                    </div>
+                    <span>Department</span>
+                </a>
+                
+                <a href="teacher-login.html" class="role-btn teacher-btn">
+                    <div class="role-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20,17A2,2 0 0,0 22,15V4A2,2 0 0,0 20,2H4A2,2 0 0,0 2,4V15A2,2 0 0,0 4,17H13L15,20V17H20M5,5H19V14H5V5M7,7V9H17V7H7M7,11V13H14V11H7Z"/>
+                        </svg>
+                    </div>
+                    <span>Teacher</span>
+                </a>
+                
+                <a href="student-login.html" class="role-btn student-btn">
+                    <div class="role-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z"/>
+                        </svg>
+                    </div>
+                    <span>Student</span>
+                </a>
+            </div>
+            
+            <div class="footer-info">
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+                <p id="current-user">Current User's Login: remy-baastin</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/common.js"></script>
+</body>
+</html>

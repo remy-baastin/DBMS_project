@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Attendance Data - College AMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container data-entry-container">
+        <div class="data-entry-wrapper">
+            <div class="data-entry-header">
+                <h1>Enter Attendance Data</h1>
+                <h2 id="class-title">Loading assigned class...</h2>
+                
+                <div class="user-info">
+                    <p id="current-user">Current User's Login: remy-baastin</p>
+                </div>
+            </div>
+            
+            <div class="date-selection">
+                <label for="attendanceDate">Select Date:</label>
+                <input type="date" id="attendanceDate" name="attendanceDate">
+            </div>
+            
+            <div class="attendance-form-container">
+                <div class="attendance-info">
+                    <p>All students are marked present by default. Toggle the button to mark a student as absent.</p>
+                </div>
+                
+                <div class="attendance-table-container">
+                    <table id="studentsTable" class="attendance-table">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Status</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody id="studentsTableBody">
+                            <!-- Student rows will be loaded here -->
+                            <tr>
+                                <td colspan="4" class="loading-message">Loading students...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="form-actions">
+                    <button id="saveAttendanceBtn" class="btn-primary">Save Attendance</button>
+                    <button id="cancelBtn" class="btn-secondary">Cancel</button>
+                </div>
+                
+                <div id="formMessage" class="form-message"></div>
+            </div>
+            
+            <div class="back-to-dashboard">
+                <a href="dashboard.html">&larr; Back to dashboard</a>
+            </div>
+            
+            <div class="footer-info">
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/teacher/enter-data.js"></script>
+</body>
+</html>

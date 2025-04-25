@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Attendance Data - College AMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container data-view-container">
+        <div class="data-view-wrapper">
+            <div class="data-view-header">
+                <h1>Attendance Records</h1>
+                <h2 id="class-title">Loading assigned class...</h2>
+                
+                <div class="user-info">
+                    <p id="current-user">Current User's Login: remy-baastin</p>
+                </div>
+            </div>
+            
+            <div class="data-view-actions">
+                <button id="viewAllBtn" class="data-btn view-all">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H4C2.89,22 2,21.1 2,20V4A2,2 0 0,1 4,2M4,4V20H20V4H4M8,11H10V19H8V11M12,11H14V19H12V11M16,11H18V19H16V11M8,5H18V9H8V5Z"/>
+                        </svg>
+                    </div>
+                    <span>View Data</span>
+                </button>
+                
+                <button id="viewBelowBtn" class="data-btn view-below">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M9,11.25A1.25,1.25 0 0,1 7.75,10A1.25,1.25 0 0,1 9,8.75A1.25,1.25 0 0,1 10.25,10A1.25,1.25 0 0,1 9,11.25M15,11.25A1.25,1.25 0 0,1 13.75,10A1.25,1.25 0 0,1 15,8.75A1.25,1.25 0 0,1 16.25,10A1.25,1.25 0 0,1 15,11.25M12,17L7,12H17L12,17Z"/>
+                        </svg>
+                    </div>
+                    <span>View Below 75%</span>
+                </button>
+                
+                <button id="viewTodayBtn" class="data-btn view-today">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z"/>
+                        </svg>
+                    </div>
+                    <span>View Today</span>
+                </button>
+            </div>
+            
+            <div id="data-results" class="data-results">
+                <div class="initial-message">
+                    <p>Select a view option above to display attendance data</p>
+                </div>
+            </div>
+            
+            <div class="back-to-dashboard">
+                <a href="dashboard.html">&larr; Back to dashboard</a>
+            </div>
+            
+            <div class="footer-info">
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/teacher/view-data.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Teacher - College AMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container form-page-container">
+        <div class="form-page-wrapper">
+            <div class="form-page-header">
+                <h1>Add New Teacher</h1>
+                <p class="subtitle">Enter the teacher's information below</p>
+                
+                <div class="user-info">
+                    <p id="current-user">Current User's Login: remy-baastin</p>
+                </div>
+            </div>
+            
+            <form id="addTeacherForm" class="add-form">
+                <div class="form-group">
+                    <label for="teacherName">Enter Name</label>
+                    <input type="text" id="teacherName" name="teacherName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacherId">Enter Teacher ID</label>
+                    <input type="text" id="teacherId" name="teacherId" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacherPassword">Enter Teacher Password</label>
+                    <input type="password" id="teacherPassword" name="teacherPassword" required>
+                    <div class="password-requirements">
+                        <p>Password should contain at least 8 characters</p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="assignedClass">Enter Assigned Class</label>
+                    <select id="assignedClass" name="assignedClass" required>
+                        <option value="">-- Select a class --</option>
+                        <!-- Classes will be loaded dynamically -->
+                    </select>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn-primary">Add Teacher</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary">Cancel</button>
+                </div>
+                
+                <div id="formMessage" class="form-message"></div>
+            </form>
+            
+            <div class="back-to-dashboard">
+                <a href="dashboard.html">&larr; Back to dashboard</a>
+            </div>
+            
+            <div class="footer-info">
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/department/add-teacher.js"></script>
+</body>
+</html>

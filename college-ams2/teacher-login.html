@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login - College AMS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form-wrapper">
+            <div class="header">
+                <h1>Teacher Login</h1>
+                <p class="subtitle">Enter your credentials to continue</p>
+            </div>
+            
+            <form id="teacherLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="teacherId">Enter Teacher ID</label>
+                    <input type="text" id="teacherId" name="teacherId" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="teacherName">Enter Teacher Name</label>
+                    <input type="text" id="teacherName" name="teacherName" required>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">Login</button>
+                </div>
+                
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+            
+            <div class="back-to-roles">
+                <a href="index.html">&larr; Back to role selection</a>
+            </div>
+            
+            <div class="footer-info">
+                <p id="current-datetime">Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-04-23 16:43:07</p>
+                <p id="current-user">Current User's Login: remy-baastin</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/common.js"></script>
+    <script src="js/teacher-login.js"></script>
+</body>
+</html>
